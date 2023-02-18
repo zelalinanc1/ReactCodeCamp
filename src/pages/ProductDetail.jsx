@@ -5,6 +5,7 @@ import ProductService from "../services/productService";
 
 export default function ProductDetail() {
   let { name } = useParams();
+  
 
   const [product, setProduct] = useState({});
 
@@ -26,7 +27,7 @@ export default function ProductDetail() {
               src="/images/avatar/large/steve.jpg"
             />
             <Card.Header> {product.productName}</Card.Header>
-            <Card.Meta>{product.category.categoryName}</Card.Meta>
+            {/* <Card.Meta>{product.category.categoryName}</Card.Meta> */}
             <Card.Description>
               Steve wants to add you to the group <strong>best friends</strong>
             </Card.Description>

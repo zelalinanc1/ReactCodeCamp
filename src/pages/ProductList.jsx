@@ -40,7 +40,7 @@ export default function ProductList() {
         <Table.Body>
           {products.map((product) => (
             <Table.Row key={product.id}>
-              <Table.Cell><Link to={`/products/${product.productName}`}>{product.id}</Link></Table.Cell>
+              <Table.Cell><Link to={`/products/${product.productName}`}>{product.productName}</Link></Table.Cell>
               <Table.Cell>{product.productName}</Table.Cell>
               <Table.Cell>{product.category.categoryName}</Table.Cell>
               <TableCell><Button onClick={()=>handleAddToCart(product)}>Sepete Ekle</Button></TableCell>
@@ -67,7 +67,10 @@ export default function ProductList() {
             </Table.HeaderCell>
           </Table.Row>
         </Table.Footer>
+      
       </Table>
+      <Button ><Link to="/product/add">Yeni Ürün Ekle</Link></Button>
     </div>
   );
+  
 }
